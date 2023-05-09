@@ -1,0 +1,25 @@
+<h1>{{nombre}}</h1>
+<hr>
+<dl>
+    <dt>Nombre:</dt>
+    <dd>{{nombre}}</dd>
+
+    <dt>Edad:</dt>
+    <dd>{{edad}}</dd>
+
+    <dt>Metodo:</dt>
+    <dd>{{getHeroDescription()}}</dd>
+
+    <dt>Capitalizado:</dt>
+    <dd>{{capitalizeName}}</dd>
+</dl>
+<div *ngIf="validado">
+    <h1>Bienvenido {{nombre}}</h1>
+    <h2>¡Gracias por unirte a nuestro sitio!</h2>
+    <p>¡Gracias por unirte a nuestro sitio!</p>
+    <p>Esperamos que disfrutes de la expreriencia.</p>
+</div>
+<button (click)="isLogin()" class="btn btn-outline-primary">Login</button>
+<button *ngIf="isSpiderman()" class="btn btn-primary mx-2" (click)="changeName()">Cambiar Nombre</button>
+<button *ngIf="edad!==34" (click)="changeEdad()" class="btn btn-primary mx-2">Cambiar Edad</button>
+<button class="btn btn-primary mx-2" (click)="reset()">Reset</button>
